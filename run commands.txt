@@ -1,4 +1,0 @@
-###Base model -- DNA Only
-python dna_baselines.py --preset hyenadna-small-1k --batch_size 4
-python dna_baselines.py --preset hyenadna-medium-1k --batch_size 4
-python dna_baselines.py --preset hyenadna-small-32k --batch_size 1 --window_bp 1024
