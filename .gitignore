@@ -23,4 +23,5 @@ dataset/*.json
 .ipynb_checkpoints/
 
 dataset/
-check_cuda.py/
+check_cuda.py
+run commands.txt/run commands.txt
