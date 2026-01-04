@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Logs and outputs
+*.log
+outputs/
+
+# Data (if large or derived)
+dataset/*.pkl
+dataset/*.json
+
+# OS / IDE
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
+
+dataset/
+check_cuda.py/
