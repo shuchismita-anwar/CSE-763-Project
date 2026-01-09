@@ -24,4 +24,4 @@ dataset/*.json
 
 dataset/
 check_cuda.py
-run commands.txt/run commands.txt
+run commands.txt/

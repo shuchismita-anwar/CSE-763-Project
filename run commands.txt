@@ -2,3 +2,17 @@
 python dna_baselines.py --preset hyenadna-small-1k --batch_size 4
 python dna_baselines.py --preset hyenadna-medium-1k --batch_size 4
 python dna_baselines.py --preset hyenadna-small-32k --batch_size 1 --window_bp 1024
+
+
+python dna_baselines.py --preset hyenadna-small-32k --window_bps 512,1024,2048 --add_variant_features --classifier mlp --mlp_hidden 256,128 --standardize --report_auroc --report_auprc
+Same but no class weighting (often better accuracy):
+python dna_baselines.py --preset hyenadna-small-32k --window_bps 512,1024,2048 --add_variant_features --classifier mlp --mlp_hidden 256,128 --standardize --no_class_weight --report_auroc --report_auprc
+Add PLL delta (slow, optional):
+python dna_baselines.py --preset dnabert2 --window_bps 512 --add_variant_features --add_pll_delta --pll_max_positions 16 --report_auroc --report_auprc
+Notes
+
+--add_pll_delta is expensive on large datasets. Consider --max_samples first.
+Full encoder fine‑tuning isn’t included here; I only added the MLP head option.
+
+
+make the naming format correct while saving logs like inside dna_baseline there will be dataset directories and inside dataset there will be different approach directories so that nothing replaces
